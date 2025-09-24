@@ -1,0 +1,114 @@
+.as-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 50vh auto 0;
+  transform: translateY(-50%);
+}
+
+.as-widget {
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 2rem;
+  color: white;
+  min-height: 200px;
+  display: grid;
+  place-items: center;
+  font-size: 1.2rem;
+}
+
+.as-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.as-reset-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: #f43f5e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+@media (max-width: 600px) {
+  .as-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+.as-saved-message {
+  color: #4ade80;
+  /* green-400 */
+  margin: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  visibility: hidden;
+  /* Hide from layout when not visible */
+}
+
+.as-saved-message--visible {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+/* --- New styles for Reset Button --- */
+.as-reset-button {
+  /* ... (existing styles for the button) ... */
+  transition: transform 0.1s ease-in-out;
+  /* Add transition for smooth scaling */
+}
+
+.as-reset-button:hover {
+  transform: scale(1.05);
+  /* Replicates whileHover */
+}
+
+.as-reset-button:active {
+  transform: scale(0.95);
+  /* Replicates whileTap */
+}
+.as-saved-message {
+  color: #4ade80;
+  /* green-400 */
+  margin: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  visibility: hidden;
+  /* Hide from layout when not visible */
+}
+
+.as-saved-message--visible {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+/* --- New styles for Reset Button --- */
+.as-reset-button {
+  /* ... (existing styles for the button) ... */
+  transition: transform 0.1s ease-in-out;
+  /* Add transition for smooth scaling */
+}
+
+.as-reset-button:hover {
+  transform: scale(1.05);
+  /* Replicates whileHover */
+}
+
+.as-reset-button:active {
+  transform: scale(0.95);
+  /* Replicates whileTap */
+}
