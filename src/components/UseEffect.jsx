@@ -9,11 +9,11 @@ import AutoEqualHeightGrid from './helpers/just2boxes';
 export default function UseEffect() {
 
     const [title, setTitle] = useState("React useEffect Examples");
-    const [isTyping, setIsTyping] = useState(false); // ✅ New: tracks typing state
+    const [isTyping, setIsTyping] = useState(false); // New: tracks typing state
     const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
     const [completed, setCompleted, storageStatus] = useLocalStorage('useEffectCompleted', false);
-    const isInitialTitleLoad = useRef(true); // ✅ Ref for title effect
+    const isInitialTitleLoad = useRef(true); // Ref for title effect
 
     const handleMove = useCallback((e) => {
         setMousePos({ x: e.clientX, y: e.clientY });
@@ -79,7 +79,7 @@ export default function UseEffect() {
                     placeholder="Type to change document title"
                     className="ue-input"
                 />
-                {/* ✅ New: Typing status indicator */}
+                {/* New: Typing status indicator */}
                 <div className="ue-typing-status">
                     {isTyping ? (
                         <span className="ue-typing-active">⏳ User typing... timer prolonged</span>

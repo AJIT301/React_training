@@ -1,6 +1,7 @@
-// src/components/Task1.jsx
+// src/components/Comp1.jsx
 import { useState, useEffect } from 'react';
 import Confetti from 'react-confetti';
+import '../styles/Comp1.css';
 
 export default function Task1() {
     const [count, setCount] = useState(0);
@@ -37,57 +38,36 @@ export default function Task1() {
     };
 
     return (
-        <div>
-            <p>Count: {count}</p>
-            <div style={{ height: '24px', display: 'flex', alignItems: 'center' }}>
+        <div className="comp1-container">
+            <div className="comp1-top-row">
+                <p>Count: {count}</p>
+                
+            </div>
+            <div className="comp1-message">
                 <p>{message}</p>
             </div>
-            <button
-                style={{
-                    backgroundColor: count >= 10 ? "#cccccc" : "green",
-                    color: count >= 10 ? "#666666" : "white",
-                    padding: "8px 16px",
-                    margin: "5px",
-                    border: "none",
-                    borderRadius: "111px",
-                    cursor: count >= 10 ? "not-allowed" : "pointer",
-                    opacity: count >= 10 ? 0.7 : 1,
-                }}
-                onClick={handleClick}
-                disabled={count >= 10}
-            >
-                Increment
-            </button>
-            <button
-                style={{
-                    backgroundColor: "whitesmoke",
-                    color: "black",
-                    padding: "8px 16px",
-                    margin: "5px",
-                    border: "none",
-                    borderRadius: "111px",
-                    cursor: "pointer",
-                }}
-                onClick={reset}
-            >
-                Reset
-            </button>
-            <button
-                style={{
-                    backgroundColor: count <= 0 ? "#cccccc" : "red",
-                    color: count <= 0 ? "#666666" : "white",
-                    padding: "8px 16px",
-                    margin: "5px",
-                    border: "none",
-                    borderRadius: "111px",
-                    cursor: count <= 0 ? "not-allowed" : "pointer",
-                    opacity: count <= 0 ? 0.7 : 1,
-                }}
-                onClick={decremental}
-                disabled={count <= 0}
-            >
-                Decrement
-            </button>
+            <div className="comp1-buttons">
+                <button
+                    className={`comp1-button comp1-increment ${count >= 10 ? 'comp1-disabled' : ''}`}
+                    onClick={handleClick}
+                    disabled={count >= 10}
+                >
+                    Increment
+                </button>
+                <button
+                    className="comp1-button comp1-reset"
+                    onClick={reset}
+                >
+                    Reset
+                </button>
+                <button
+                    className={`comp1-button comp1-decrement ${count <= 0 ? 'comp1-disabled' : ''}`}
+                    onClick={decremental}
+                    disabled={count <= 0}
+                >
+                    Decrement
+                </button>
+            </div>
             {count >= 10 && <Confetti width={window.innerWidth} height={window.innerHeight} />}
         </div>
     );

@@ -13,7 +13,7 @@ export default function useCompRegistry() {
         if (savedComps) {
             try {
                 const parsedComps = JSON.parse(savedComps);
-                // ✅ Validate structure
+                // Validate structure
                 if (Array.isArray(parsedComps)) {
                     setComps(parsedComps);
                 } else {

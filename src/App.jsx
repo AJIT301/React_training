@@ -6,7 +6,7 @@ import CompComponents from './components/helpers/TaskComponents.js';
 import { WidgetProvider } from './components/Assignments/WidgetContext.jsx';
 import './App.css';
 
-// ✅ Define all default comps here
+// Define all default comps here
 const DEFAULT_COMPS = [
   { name: "First comp", type: "First", description: "Your very first component — a simple starter." },
   { name: "Display", type: "Greetings", description: "Learn how to pass props — displays a greeting with a name." },
@@ -37,10 +37,10 @@ function App() {
     return <div>Loading your comps...</div>;
   }
 
-  console.log("🚀 Components in App:", comps);
+  // console.log("Components in App:", comps);
   return (
     <div className="app-container">
-      
+
       {comps.map((comp) => {
         if (!comp.isVisible) return null;
 
