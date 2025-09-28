@@ -7,6 +7,7 @@ import UseRefComponent from  '../UseRef.jsx'
 import Assignment1 from '../Assignments/Assignment1.jsx'
 import FetchAPI from '../FetchAPI.jsx';
 import OptimizedFetchAPI from '../OptimizedFetchAPI.jsx';
+import SteamCS2Api from '../SteamCS2Api.jsx';
 
 
 const TaskComponents = {
@@ -17,7 +18,8 @@ const TaskComponents = {
     UseRefComponent: UseRefComponent,
     Assignment1: Assignment1,
     FetchAPI: FetchAPI,
-    OptimizedFetchAPI: OptimizedFetchAPI
+    OptimizedFetchAPI: OptimizedFetchAPI,
+    SteamCS2Api: SteamCS2Api
 };
 
 export default TaskComponents;

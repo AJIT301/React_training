@@ -15,7 +15,9 @@ const DEFAULT_COMPS = [
   { name: "UseRefComponent", type: "UseRefComponent", description: "Master usage of UseRef hook" },
   { name: "Assignment1", type: "Assignment1", description: "Goal: Build a React page with 3 widgets (boxes in a grid) Each widget has its own toggle switch or control.All states are saved in localStorage. A parent Reset Allbutton can reset all widgets to default by calling each widget’s exposed method via" },
   { name: "FetchAPI", type: "FetchAPI", description: "Master usage of Fetch API" },
-  { name: "OptimizedFetchAPI", type: "OptimizedFetchAPI", description: "Master usage of Fetch API and React Optimizations!" }
+  { name: "OptimizedFetchAPI", type: "OptimizedFetchAPI", description: "Master usage of Fetch API and React Optimizations!" },
+  { name: "SteamCS2Api", type: "SteamCS2Api", description: "Steam CS2 geodata relay servers" }
+
 ];
 
 
